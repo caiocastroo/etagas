@@ -4,6 +4,16 @@
  * @link https://joseassis.com.br/
  */
 
+//registrar o service worker>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+//se o serviceworker estiver disponivel no navegador
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker
+    .register('/sw.js')
+    .then(() => {
+        console.log("Service Worker Registrado.")
+    })
+}
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 function calcular() {
     // pegar valores dos inputs
     let gasolina = Number(document.getElementById('gasolina').value)
